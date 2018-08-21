@@ -6,7 +6,8 @@ module.exports=app=>{
         author:String,
         source:[{siteName:String,hosts:String,updateAt:Date}],
         label:{type:Array},
-        type:{type:String}
+        type:{type:String},
+        status:[{code:Number,deadLine:Date}]
     })
     return mongoose.model("Book",BookSchema)
 }
