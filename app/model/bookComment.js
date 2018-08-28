@@ -3,9 +3,10 @@ module.exports=app=>{
     const Schema=mongoose.Schema
     const bookCommentSchema=new Schema({
         bookId:{type:Schema.Types.ObjectId,ref:'Book'},
-        userId:{type:Schema.Types.ObjectId,ref:'USer'},
+        createrId:{type:Schema.Types.ObjectId,ref:'USer'},
         content:{type:String,require:true},
         score:Number,
         creatAt:{type:Date,default:Date.now()}
     })
+    return mongoose.model('BookComment',bookCommentSchema)
 }
