@@ -5,8 +5,11 @@ module.exports=app=>{
         UID:String,
         title:String,
         author:String,
-        source:[{siteName:String,hosts:String,updateAt:Date}],
-        tags:[{tag:String}],
+        countWord:Number,
+        updateAt:Date,
+        source:[{siteName:String,hosts:String,defaultSource:Boolean}],
+        tags:[{type:Schema.Types.ObjectId,ref:'Tag'}],
+        personalTag:[{tag:String,UID:{type:Schema.Types.ObjectId,ref:'User'}}],
         status:[{code:Number,deadLine:Date}]
     })
     return mongoose.model("Book",BookSchema)
