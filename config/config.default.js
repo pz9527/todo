@@ -12,10 +12,10 @@ module.exports = appInfo => {
     key: appInfo.name + '_123456',
   };
   config.mongoose={
-    client:{
+
       url:'mongodb://127.0.0.1:27017/yousuu',
       options:{}
-    }
+  
   }
 
   return config;
