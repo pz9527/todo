@@ -9,6 +9,7 @@ module.exports=app=>{
         creatAt:{type:Date,default:Date.now()},
         status:Number,
         jurisdiction:Number
+
     })
     return mongoose.model('BookComment',bookCommentSchema)
 }
