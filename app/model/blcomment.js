@@ -6,4 +6,5 @@ module.exports=app=>{
         content:{type:String,require:true},
         creatAt:{type:Date,default:Date.now()}
     })
+    return mongoose.model('BLComment',blCommentSchema)
 }
