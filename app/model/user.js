@@ -6,8 +6,15 @@ module.exports=app=>{
         infomation:{
             email:String,
             pwd:String,
-            photo:String
-        }
+            photo:String,
+            sexed:Number,
+            autograph:String
+        },
+        status:{
+            statusCode:Number,
+            deadLine:Date
+        },
+        unread:{type:Number,default:0}
     })
     return mongoose.model('user',userSchema)
 }
