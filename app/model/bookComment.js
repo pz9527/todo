@@ -6,7 +6,9 @@ module.exports=app=>{
         createrId:{type:Schema.Types.ObjectId,ref:'USer'},
         content:{type:String,require:true},
         score:Number,
-        creatAt:{type:Date,default:Date.now()}
+        creatAt:{type:Date,default:Date.now()},
+        status:Number,
+        jurisdiction:Number
     })
     return mongoose.model('BookComment',bookCommentSchema)
 }

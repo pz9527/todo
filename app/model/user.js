@@ -16,5 +16,5 @@ module.exports=app=>{
         },
         unread:{type:Number,default:0}
     })
-    return mongoose.model('user',userSchema)
+    return mongoose.model('User',userSchema)
 }
