@@ -1,6 +1,7 @@
 const Controller =require('egg').Controller
 class HomeController extends Controller{
     async firstPage(){
-        ctx.body='ojbk'
+        this.ctx.body='ojbk'
     }
 }
+module.exports=HomeController
