@@ -8,7 +8,8 @@ module.exports=app=>{
             pwd:String,
             photo:String,
             sexed:Number,
-            autograph:String
+            autograph:String,
+            role:Number
         },
         status:{
             statusCode:Number,
