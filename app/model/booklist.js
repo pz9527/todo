@@ -13,12 +13,12 @@ module.exports=app=>{
                 content:String,
                 creatAt:{type:Date,default:Date.now()},
             }]
-            // hate:[{trpe:Schema.Types.ObjectId,ref:'User'}]
+            // hate:[{type:Schema.Types.ObjectId,ref:'User'}]
         }],
         creater:{type:Schema.Types.ObjectId,ref:'User'},
         creatAt:{type:Date,default:Date.now()},
         title:{type:String,require:true},
         content:{type:String,require:true}
     })
-    return mongoose.model('BookList',booklistSchema)
+    return mongoose.model('Booklist',booklistSchema)
 }
