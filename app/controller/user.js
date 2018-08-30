@@ -12,5 +12,12 @@ class UserController extends Controller{
         resMsg.data=await ctx.service.user.getUserList(page,keyword)
         ctx.body=resMsg
     }
+    async insertUser(){
+        console.log("controll ok")
+        await this.ctx.service.user.createUser()
+        this.ctx.body={
+            msg:true
+        }
+    }
 }
 module.exports=UserController
