@@ -5,7 +5,7 @@ module.exports=app=>{
         fromId:{type:Schema.Types.ObjectId,ref:'User'},
         toId:{type:Schema.Types.ObjectId,ref:'User'},
         content:{type:String,require:true},
-        creatAt:{type:Date,default:true}
+        creatAt:{type:Date,default:Date.now}
     })
     return mongoose.model('Reply',replySchema)
 }
