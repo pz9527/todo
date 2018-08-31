@@ -8,11 +8,7 @@ module.exports=app=>{
             reason:String,
             pushAt:Date,
             favs:[{type:Schema.Types.ObjectId,ref:'User'}],
-            reply:[{
-                createrId:{type:Schema.Types.ObjectId,ref:'User'},
-                content:String,
-                creatAt:{type:Date,default:Date.now()},
-            }]
+
             // hate:[{type:Schema.Types.ObjectId,ref:'User'}]
         }],
         creater:{type:Schema.Types.ObjectId,ref:'User'},
