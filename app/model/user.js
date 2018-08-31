@@ -9,7 +9,6 @@ module.exports=app=>{
         status:{
             statusCode:{type:Number,default:0},
             deadLine:Date,
-            
         },
         unread:{type:Number,default:0}
     })

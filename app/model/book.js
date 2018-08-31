@@ -7,12 +7,11 @@ module.exports=app=>{
         author:String,
         countWord:Number,
         updateAt:Date,
-        source:[{siteName:String,hosts:String,defaultSource:Boolean}],
         tags:{type:[String],index:true},
-        personalTag:{
+        personalTag:[{
             tag:[String],
             userId:{type:ObjectId,ref:'User'}
-        },
+        }],
     })
     return mongoose.model("Book",BookSchema)
 }
