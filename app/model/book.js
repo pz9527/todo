@@ -1,15 +1,18 @@
 module.exports=app=>{
     const mongoose =app.mongoose;
     const Schema= mongoose.Schema;
+    const ObjectId=Schema.Types.ObjectId
     const BookSchema=new Schema({
-        UID:String,
-        title:String,
+        title:{type:String,index:true},
         author:String,
         countWord:Number,
         updateAt:Date,
         source:[{siteName:String,hosts:String,defaultSource:Boolean}],
-        tags:[{type:Schema.Types.ObjectId,ref:'Tag'}],
-        personalTag:[{tag:String,UID:{type:Schema.Types.ObjectId,ref:'User'}}],
+        tags:{type:[String],index:true},
+        personalTag:{
+            tag:[String],
+            userId:{type:ObjectId,ref:'User'}
+        },
     })
     return mongoose.model("Book",BookSchema)
 }
