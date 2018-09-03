@@ -4,7 +4,8 @@ module.exports=app=>{
     const ObjectId=Schema.Types.ObjectId
     const inteStandSchema=new Schema({
         itemName:String,
-        score:Number
+        score:Number,
+        limit:Number
     })
     return mongoose.model('IntegStand',inteStandSchema)
 }

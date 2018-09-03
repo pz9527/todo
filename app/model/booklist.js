@@ -7,7 +7,8 @@ module.exports=app=>{
         title:{type:String,require:true},
         content:{type:String,require:true},
         listType:String,
-        collecttype:String
+        collecttype:String,
+        clicks:Number
     })
     return mongoose.model('Booklist',booklistSchema)
 }
