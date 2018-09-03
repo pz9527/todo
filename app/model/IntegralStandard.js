@@ -6,5 +6,5 @@ module.exports=app=>{
         itemName:String,
         score:Number
     })
-    return mongoose.model('IntegStand',inteStandSchemaS)
+    return mongoose.model('IntegStand',inteStandSchema)
 }
