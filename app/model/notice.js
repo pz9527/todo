@@ -4,7 +4,8 @@ module.exports=app=>{
     const ObjectId=Schema.Types.ObjectId
     const noticeSchema=new Schema({
         toId:{type:ObjectId},
-        content:String
+        content:String,
+        
   })
   return mongoose.model('Notice',noticeSchema)
 }
