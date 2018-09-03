@@ -6,7 +6,7 @@ module.exports=app=>{
         bLComId:{type:Schema.Types.ObjectId,ref:'BLComment'},
         createrId:{type:Schema.Types.ObjectId,ref:'User'},
         content:String,
-        createdAt:{type:Date,default:Date.now()},
+        createdAt:{type:Date,default:Date.now},
     })
     return mongoose.model('BLComReply',bLComReplySchema)
 }

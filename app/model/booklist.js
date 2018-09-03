@@ -14,7 +14,8 @@ module.exports=app=>{
         creater:{type:Schema.Types.ObjectId,ref:'User'},
         creatAt:{type:Date,default:Date.now()},
         title:{type:String,require:true},
-        content:{type:String,require:true}
+        content:{type:String,require:true},
+        listType:String
     })
     return mongoose.model('Booklist',booklistSchema)
 }
