@@ -8,7 +8,7 @@ class TestService extends Service {
     this.config = this.app.config.test;
   }
 
-  async get(id) {
+  async get (id) {
     return { id, name: this.config.key };
   }
 }

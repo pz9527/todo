@@ -11,15 +11,15 @@ module.exports = appInfo => {
   config.test = {
     key: appInfo.name + '_123456',
   };
-  config.mongoose={
-      url:'mongodb://127.0.0.1:27017/yousuu',
-      options:{}
+  config.mongoose = {
+    url: 'mongodb://127.0.0.1:27017/yousuu',
+    options: {}
   }
-  config.security={
-    csrf:{
-      enable:false
+  config.security = {
+    csrf: {
+      enable: false
     }
   }
-  config.keys="test"
+  config.keys = "test"
   return config;
 };

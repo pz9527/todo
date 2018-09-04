@@ -27,7 +27,7 @@
     "ci": "npm run lint && egg-bin pkgfiles --check && npm run cov",
     "autod": "autod",
     "pkgfiles": "egg-bin pkgfiles",
-    "dev":"egg-bin dev"
+    "dev": "egg-bin dev"
   },
   "ci": {
     "version": "8, 9"
