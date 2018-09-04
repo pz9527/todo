@@ -6,6 +6,8 @@ module.exports=app=>{
         photo:String,
         role:Number,
         autograph:String,
+        todayIntegral:Number,
+        Integral:Number,
         status:{
             statusCode:{type:Number,default:0},
             deadLine:Date,
