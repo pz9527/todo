@@ -13,7 +13,9 @@ module.exports = appInfo => {
   };
   config.mongoose = {
     url: 'mongodb://127.0.0.1:27017/yousuu',
-    options: {}
+    options: {
+      autoIndex: false
+    }
   }
   config.security = {
     csrf: {
