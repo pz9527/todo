@@ -7,6 +7,7 @@ module.exports=app=>{
         author:String,
         countWord:Number,
         updateAt:Date,
+        status:Number,
         tags:{type:[String],index:true},
         personalTag:[{
             tag:[String],
