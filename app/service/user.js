@@ -4,7 +4,7 @@ class UserService extends Service {
     async getUserList (page, keyword) {
         const { ctx } = this
         const reg = new RegExp(keyword, 'i')
-        return await ctx.model.User.find({ $or: [{ userName: { $regex: reg } }, { UID: { $regex: reg } }] }).limit(10).skip((page - 1) * 10)
+        return await ctx.model.User.find({ $or: [{ userName: { $regex: reg } }, { UID: { $regex: reg } }] }).limit(10).skip((page - 1) * 10).select('_id userName')
     }
     async createUser () {
         const { ctx } = this

@@ -8,10 +8,10 @@ class BookService extends Service {
     }
     async getAllBooklist () {
         const { ctx } = this
-        return await ctx.model.Booklist.find({})
+        return await ctx.model.Booklist.find()
     }
     async getLatestBook () {
-        return await this.ctx.model.Book.find({}, null, { limit: 20 })
+        return await this.ctx.model.Book.find().sort({ _id: -1 })
     }
 }
 module.exports = BookService
