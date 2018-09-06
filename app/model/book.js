@@ -8,11 +8,8 @@ module.exports = app => {
         countWord: Number,
         updateAt: Date,
         status: Number,
+        score: Number,
         tags: { type: [String], index: true },
-        personalTag: [{
-            tag: [String],
-            userId: { type: ObjectId, ref: 'User' }
-        }],
     });
     return mongoose.model('Book', BookSchema);
 };

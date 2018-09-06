@@ -1,9 +1,22 @@
 const Controller = require('egg').Controller
 class SearchController extends Controller {
-  async getUserByName () {
+  async visitorSearch () {
     const { ctx } = this
-    let { page = 1, keyword = '', type = '' } = ctx.query
-    let userLIst = await ctx.service.UserService.getUserList(page, keyword)
+    let keyword = ctx.params.keyword
+    // console.log(keyword);
+    let { page = 1, type = 'all', status = 0, limit = 25 } = ctx.query
+    let resMsg = {
+      errcode: 0,
+      data: {},
+      msg: 'success'
+    }
+    if (type == 'author') {
+      resMsg.data = await ctx.service.book.getBookByAuthor(page, keyword, limit)
+    } else if (type == 'title') {
+      resMsg.data = await ctx.service.book.getBookByName(page, keyword, limit)
+    }
+    ctx.body = resMsg
+
   }
 }
 module.exports = SearchController

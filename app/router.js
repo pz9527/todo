@@ -3,4 +3,5 @@ module.exports = app => {
     router.get('/', controller.home.firstPage);
     router.get('/admin/user', controller.user.getUser);
     router.post('/admin/insertUser', controller.user.insertUser);
+    router.get('/search/:keyword', controller.search.visitorSearch)
 };
