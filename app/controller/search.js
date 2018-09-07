@@ -14,6 +14,8 @@ class SearchController extends Controller {
       resMsg.data = await ctx.service.book.getBookByAuthor(page, keyword, limit)
     } else if (type == 'title') {
       resMsg.data = await ctx.service.book.getBookByName(page, keyword, limit)
+    } else if (type == 'booklist') {
+      resMsg.data = await ctx.service.booklist.getBooklistByName(page, keyword, 20)
     }
     ctx.body = resMsg
 

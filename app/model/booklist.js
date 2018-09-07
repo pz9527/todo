@@ -8,7 +8,9 @@ module.exports = app => {
         content: { type: String, require: true },
         listType: String,
         collecttype: String,
-        clicks: Number
+        clicks: Number,
+        praiseTotal: Number,
+        favsTotal: Number
     });
     return mongoose.model('Booklist', booklistSchema);
 };

@@ -4,7 +4,7 @@ const Service = require('egg').Service;
 class BookService extends Service {
     async getBookByName (page, keyword, limit) {
         const reg = new RegExp(keyword, 'i')
-        console.log(page + keyword + limit);
+        // console.log(page + keyword + limit);
 
         return await this.ctx.model.Book.find({ title: { $regex: reg } })
             .limit(limit)
@@ -20,7 +20,7 @@ class BookService extends Service {
     }
     async getBookByAuthor (page, keyword, limit) {
         const reg = new RegExp(keyword, 'i')
-        console.log(page + keyword + limit);
+        // console.log(page + keyword + limit);
 
         return await this.ctx.model.Book.find({ author: { $regex: reg } })
             .limit(limit)
